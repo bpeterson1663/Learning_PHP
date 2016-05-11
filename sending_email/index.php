@@ -6,7 +6,7 @@
   </head>
   <body>
     <?php
-      // 
+      //
       // $emailTo ="bpeterson1663@gmail.com";
       // $subject ="First Email Subject";
       // $body = "Awesome Job!";
@@ -19,28 +19,23 @@
       //   echo "Mail did not send";
       // }
 
-      $names=array("Brady", "Mike", "Nathan");
+      $names = array("Fred", "Rob", "Ian");
+       if ($_POST["submit"]) {
 
+         if ($_POST["name"]) {
 
-      if($_POST["submit"]){
-        if($_POST['name']){//Will return true if name has a value when submited
-
-          foreach ($names as $name){
-            if ($_POST["name"]==$name);
-              echo "Your name is in the array as ".$name;
+           foreach ($names as $name) {
+              if ($POST['name'] == $name) echo "I know you! Your name is ".$name;
               $knowYou = 1;
-          }
-        }
+            }
+        if (!$knowYou) echo "I don’t know you, ".$name;
 
-        if(!$knowYou){
-          echo "Your name is not in the array. Sorry ".$_POST['name'];
+        } else {
+          echo "Please enter your name";
         }
-      }else {
-        echo "Please enter your name";
-      }
-
+       }
     ?>
-    <form method="POST">
+    <form method="post">
       <label for="name">Name</label>
       <input name="name" type="text"/>
       <input type="submit" name="submit" value="Submit Your Name"/>
