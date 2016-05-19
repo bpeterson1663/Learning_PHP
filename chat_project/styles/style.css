@@ -1,9 +1,20 @@
-.email-form{
-  border:1px solid grey;
-  border-radius:10px;
-  margin-top: 20px;
+h1{
+  text-align: center;
 }
-
 form{
-  padding-bottom: 10px;
+  padding: 10px;
+}
+table, tr{
+  width:100%;
+  padding: 10px;
+}s
+.name{
+  float: left;
+  font-weight: bold;
+}
+.message{
+  margin:0 auto;
+}
+.date{
+  float: right;
 }
